@@ -39,7 +39,7 @@
     <section class="hero hero_section">
         <div class="container">
             <h1>Effective Solutions<br>for Your Business</h1>
-            <button data-modal-open class="hero_button" type="button" data-toggle="modal" >Order Service</button>
+            <button data-modal-open class="hero_button" type="button" data-toggle="modal">Order Service</button>
         </div>
     </section>
 <!-- SECTION 1-->
@@ -225,28 +225,77 @@
                 </label>
             </div>
 
-
-
-
-
-
         </div>
     </footer>
 
 <!-- MODAL 
     <div data-modal class="backdrop is-hidden">
         ------------------->
-<div data-modal class="backdrop is-hidden">
+<div data-modal class="backdrop ">
     <div class="modal">
-        <button data-modal-close type="button" class="modal_close_button" tabindex="0">
-            <svg class="close-black-18dp">
-                <use href="./images/icons.svg#close-black-18dp"></use>
+        <div class="closing-button">
+            <button data-modal-close type="button" class="modal_close_button" tabindex="0">
+                <svg class="close-black-18dp">
+                    <use href="./images/icons.svg#close-black-18dp"></use>
+                </svg>
+            </button>
+        </div>
+    
+
+<!-- FORM -------------------------------------------------->
+<form class="form" name="form" autocomplete="on" novalidate>
+    <div class="inputs">
+
+        <span class="title">
+            <p>Leave your contacts and we will call you back
+            </p>
+        </span>
+       
+        <label>
+            <span class="input-title">Name</span>
+            <input type="name" name="name" class="input">
+            <svg class="input_person-black-18dp"><use href="./images/icons.svg#person-black-18dp"></use></svg> 
+        </label>
+
+        <label>
+            <span class="input-title">Phone</span>
+            <input type="tel" name="phone_number" />
+            <svg class="input_phone-black-18dp">
+                <use href="./images/icons.svg#icon-phone-black-18dp"></use>
             </svg>
-        </button>
-    </div>
-</div>
+        </label>
+
+        <label>
+            <span class="input-title">Email</span>
+            <input type="email" name="email" />
+            <svg class="input_email-black-18dp">
+                <use href="./images/icons.svg#icon-icon-email-black-18dp"></use>
+            </svg>
+        </label>
+
+        <label>
+            <span class="input-title">Comment</span>
+            <textarea name="feedback" rows="2" placeholder="Text input"></textarea> 
+        </label>
+        <div class="check_div">
+            <!--------------------------------------------------------- checked -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="0.5" y="0.5" width="15" height="15" rx="1.5" stroke="#2E2F42" stroke-opacity="0.4"/></svg>
 
 
+       
+            <p class="consent">I accept the terms and conditions of the <a href="#">Privacy Policy</a></p>
+        </div>
+
+
+        <button class="button">Send</button>
+<!--<div data-modal class="backdrop is-hidden">
+    <div class="modal">   TE DWA DIVY TU SIE KONCZA -->
+        </div>
+        </div>
+ <!-- SCRIPT ---------------------------------------->
 <script src="./js/modal.js"></script>
 </body>
 </html>
+
+
+

@@ -676,6 +676,10 @@ h3 {
 
 /* MODAL  CLOSE BUTTON ---------------------------------------------- */
 
+.closing-button {
+  position: absolute;
+}
+
 .close-black-18dp {
   width: 8px;
   height: 8px;
@@ -745,4 +749,157 @@ h3 {
   visibility: hidden;
   opacity: 0;
   transition-property: visibility, opacity;
+}
+
+/* INPUTS MODAL -----------------------------------------------*/
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+}
+
+input {
+  font-family: inherit;
+  font-size: 12px;
+  width: 360px;
+  height: 40px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  padding: 8px 38px;
+}
+
+textarea {
+  width: 360px;
+  height: 120px;
+  flex-shrink: 0;
+
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+
+  padding: 8px 16px;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form .title {
+  color: var(--dark);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  height: 336px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+  margin-top: 48px;
+}
+
+.form .button {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  padding: 16px 32px;
+  background-color: var(--primary-brand);
+  color: var(--white-background);
+  border: none;
+  margin-bottom: 24px;
+
+  width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.form .button:is(:hover, :focus) {
+  cursor: pointer;
+  background-color: var(--pressed-state);
+}
+
+.input_person-black-18dp {
+  fill: #2e2f42;
+  background-color: #404bbf;
+  position: absolute;
+  top: 26%;
+  left: 11%;
+  transform: translate(-50%, -50%) scale(1);
+  height: 18px;
+  width: 18px;
+}
+
+.input_phone-black-18dp {
+  fill: #2e2f42;
+  background-color: var(--white-background);
+  position: relative;
+  bottom: 25%;
+  left: 6%;
+  transform: translate(-50%, -50%) scale(1);
+  height: 18px;
+  width: 24px;
+}
+
+.input_email-black-18dp {
+  fill: #2e2f42;
+  background-color: #404bbf;
+  position: relative;
+  left: 6%;
+  bottom: 25%;
+  transform: translate(-50%, -50%);
+  height: 18px;
+  width: 24px;
+}
+
+.consent {
+  color: var(--subtle-text);
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+
+.check_div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check_div a {
+  color: var(--primary-brand);
+}
+.checkbox {
+  width: 16px;
+  stroke-width: 1px;
+  stroke: var(--subtle-text, rgba(46, 47, 66, 0.4));
 }

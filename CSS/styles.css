@@ -378,6 +378,7 @@ h3 {
 
 .footer {
   background-color: var(--dark);
+  max-width: 1440px;
 }
 
 .footer .container {
@@ -385,7 +386,6 @@ h3 {
   padding-top: 101.5px;
   padding-bottom: 100px;
   gap: 120px;
-  align-items: flex-start;
 }
 
 .footer_text {
@@ -440,6 +440,82 @@ h3 {
 .footer_icon_self {
   width: 24px;
   height: 24px;
+}
+
+/* FOOTER SUSCRIBE -------------------------------------------------- */
+
+.footer_sub_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 453px;
+  height: 80px;
+}
+
+.footer_sub_div p {
+  font-weight: 500;
+  color: var(--white-background);
+  margin-left: 80px;
+}
+
+.footer_input_email {
+  gap: 24px;
+  width: 264px;
+  height: 40px;
+  flex-shrink: 0;
+  background: transparent;
+  padding: 8px;
+  padding-left: 16px;
+  color: var(--white-background);
+
+  border-radius: 4px;
+  border: 1px solid var(--white-background);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+::placeholder {
+  color: var(--white-background);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 0.02;
+  letter-spacing: 0.04em;
+}
+
+.footer_sub_label-div {
+  display: flex;
+  flex-direction: row;
+  gap: 24;
+}
+
+.footer_sub_button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  width: 165px;
+  height: 40px;
+
+  gap: 16px;
+  background-color: var(--primary-brand);
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: var(--white-background);
+  fill: var(--white-background);
+  border: none;
+}
+
+.footer_sub_button:is(:hover, :focus) {
+  background-color: var(--pressed-state);
+  transition-duration: 250ms, 0s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* CUSTOMERS --------------------------------------------------------- */

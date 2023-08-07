@@ -591,6 +591,7 @@ h3 {
 .filters button:d:is(:hover, :focus) {
   background-color: var(--pressed-state);
   cursor: pointer;
+  border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: var(--white-background);
   transition-duration: 250ms, 0s;
@@ -756,18 +757,6 @@ h3 {
 
 /* INPUTS MODAL -----------------------------------------------*/
 
-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4px;
-  font-family: inherit;
-  font-size: 12px;
-  font-style: normal;
-  line-height: 1.16;
-  letter-spacing: 0.04em;
-  color: var(--subtle-text);
-}
-
 input {
   font-family: inherit;
   font-size: 12px;
@@ -780,17 +769,60 @@ input {
 }
 
 textarea {
-  width: 360px;
-  height: 120px;
-  flex-shrink: 0;
-
-  border-radius: 4px;
-  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
-
-  padding: 8px 16px;
-  margin-top: 4px;
   font-family: inherit;
   font-size: inherit;
+  width: 360px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  padding: 8px 16px;
+  margin-top: 4px;
+  resize: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*-- ICONS MODAL INPUTS ------------------------------------> relative to label? */
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+}
+
+.inputs svg {
+  fill: var(--dark);
+  transform: translate(-50%, -50%) scale(1);
+  height: 18px;
+  width: 24px;
+  position: absolute;
+  top: 65%;
+  left: 6%;
+  background-color: #404bbf;
 }
 
 .form .title {
@@ -802,23 +834,8 @@ textarea {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 360px;
-  height: 336px;
-
-  font-family: inherit;
-  font-size: 12px;
-  font-style: normal;
-  line-height: 1.16;
-  letter-spacing: 0.04em;
-  color: var(--subtle-text);
-  margin-top: 48px;
+  padding-top: 48px;
 }
 
 .form .button {
@@ -830,13 +847,12 @@ textarea {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 
   padding: 16px 32px;
   background-color: var(--primary-brand);
   color: var(--white-background);
   border: none;
-  margin-bottom: 24px;
 
   width: 169px;
   height: 56px;
@@ -847,39 +863,6 @@ textarea {
 .form .button:is(:hover, :focus) {
   cursor: pointer;
   background-color: var(--pressed-state);
-}
-
-.input_person-black-18dp {
-  fill: #2e2f42;
-  background-color: #404bbf;
-  position: absolute;
-  top: 26%;
-  left: 11%;
-  transform: translate(-50%, -50%) scale(1);
-  height: 18px;
-  width: 18px;
-}
-
-.input_phone-black-18dp {
-  fill: #2e2f42;
-  background-color: var(--white-background);
-  position: relative;
-  bottom: 25%;
-  left: 6%;
-  transform: translate(-50%, -50%) scale(1);
-  height: 18px;
-  width: 24px;
-}
-
-.input_email-black-18dp {
-  fill: #2e2f42;
-  background-color: #404bbf;
-  position: relative;
-  left: 6%;
-  bottom: 25%;
-  transform: translate(-50%, -50%);
-  height: 18px;
-  width: 24px;
 }
 
 .consent {
@@ -895,15 +878,13 @@ textarea {
 .check_div {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .check_div a {
   color: var(--primary-brand);
-}
-
-.checkbox {
-  width: 16px;
-  stroke-width: 1px;
-  stroke: var(--subtle-text, rgba(46, 47, 66, 0.4));
 }

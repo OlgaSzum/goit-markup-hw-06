@@ -83,8 +83,7 @@ h3 {
   font-family: "Roboto";
 }
 
-.button:hover,
-.button:focus {
+.buttond:is(:hover, :focus) {
   color: var(--pressed-state);
   transition-duration: 250ms, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,7 +206,7 @@ h3 {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1.jpg);
+    url(../images/people-office.jpg);
   max-width: 1440px;
 }
 
@@ -248,8 +247,7 @@ h3 {
   color: var(--white-background);
 }
 
-.hero_button:hover,
-.hero_button:focus {
+.hero_button:is(:hover, :focus) {
   background-color: var(--pressed-state);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition-duration: 250ms, 0s;
@@ -485,7 +483,7 @@ h3 {
 .footer_sub_label-div {
   display: flex;
   flex-direction: row;
-  gap: 24;
+  gap: 24px;
 }
 
 .footer_sub_button {
@@ -499,6 +497,7 @@ h3 {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   width: 165px;
   height: 40px;
@@ -514,6 +513,7 @@ h3 {
 
 .footer_sub_button:is(:hover, :focus) {
   background-color: var(--pressed-state);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition-duration: 250ms, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -531,31 +531,22 @@ h3 {
 .client_div {
   display: flex;
   justify-content: center;
-  width: 168px;
-  height: 88px;
-  border-radius: 4px;
-  border: 1px solid var(--lightslate, #8e8f99);
-  padding: 16px 32px;
 }
 
 .client_icon {
   align-self: center;
   fill: var(--subtle-text);
+  width: 168px;
+  height: 88px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--lightslate, #8e8f99);
 }
 
-.client_icon:hover,
-.client_icon:focus {
-  fill: var(--pressed-state);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client_div:hover,
-.client_div:focus {
+.client_icon:is(:hover, :focus) {
   fill: var(--pressed-state);
   border-color: var(--pressed-state);
-  transition-duration: 250ms, 0s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 /* PORTFOLIO --------------------------------------------------------- */
@@ -586,9 +577,9 @@ h3 {
   align-items: center;
 }
 
-.filters button:hover,
-.filters button:focus {
+.filters button:d:is(:hover, :focus) {
   background-color: var(--pressed-state);
+  cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: var(--white-background);
   transition-duration: 250ms, 0s;
@@ -617,6 +608,7 @@ h3 {
 }
 
 .gallery_card:is(:hover, :focus) {
+  cursor: pointer;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -898,6 +890,7 @@ textarea {
 .check_div a {
   color: var(--primary-brand);
 }
+
 .checkbox {
   width: 16px;
   stroke-width: 1px;

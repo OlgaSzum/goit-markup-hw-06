@@ -51,7 +51,7 @@ h3 {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.04px;
+  letter-spacing: 0.04em;
   color: var(--dark);
 }
 
@@ -68,11 +68,6 @@ h3 {
   padding-bottom: 120px;
 }
 
-.hero_section {
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
-
 .list {
   list-style: none;
 }
@@ -84,7 +79,7 @@ h3 {
   font-family: "Roboto";
 }
 
-.buttond:is(:hover, :focus) {
+.button:is(:hover, :focus) {
   color: var(--pressed-state);
   transition-duration: 250ms, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -215,6 +210,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 48px;
 }
 
@@ -225,9 +221,10 @@ h3 {
   font-style: normal;
   font-weight: 700;
   line-height: 1.07;
-  letter-spacing: 1.12px;
-
+  letter-spacing: 0.02em;
   max-width: 496px;
+
+  margin-top: 68px;
 }
 
 .hero_button {
@@ -246,6 +243,8 @@ h3 {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-background);
+
+  margin-bottom: 68px;
 }
 
 .hero_button:is(:hover, :focus) {
@@ -376,22 +375,29 @@ h3 {
 /* FOOTER --------------------------------------------------------- */
 
 .footer {
+  display: flex;
+  align-items: center;
   background-color: var(--dark);
-  max-width: 1440px;
 }
 
 .footer .container {
   display: flex;
   padding-top: 101.5px;
   padding-bottom: 100px;
-  gap: 120px;
+  align-items: center;
 }
 
-.footer_text {
-  color: var(--light);
+.footer_motto_div {
+  display: flex;
+  flex-direction: column;
+  gap: 17.5px;
   width: 264px;
   height: 72px;
-  margin-top: 17.5px;
+  margin-right: 120px;
+}
+
+.footer_motto_div p {
+  color: var(--light);
 }
 
 .footer .logo_studio {
@@ -402,10 +408,11 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-right: 80px;
 }
 
 .footer_social_div p {
-  color: var(--white, #fff);
+  color: var(--white-background);
   font-style: normal;
   font-weight: 500;
 }
@@ -446,23 +453,31 @@ h3 {
 .footer_sub_div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 16px;
-  width: 453px;
-  height: 80px;
 }
 
 .footer_sub_div p {
-  font-weight: 500;
   color: var(--white-background);
-  margin-left: 80px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.footer_sub_label-div {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: flex-start;
+  width: 453px;
+  height: 80px;
+  gap: 24px;
 }
 
 .footer_input_email {
+  display: flex;
   gap: 24px;
+
   width: 264px;
   height: 40px;
-  flex-shrink: 0;
   background: transparent;
   padding: 8px;
   padding-left: 16px;
@@ -479,12 +494,6 @@ h3 {
   font-weight: 400;
   line-height: 0.02;
   letter-spacing: 0.04em;
-}
-
-.footer_sub_label-div {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
 }
 
 .footer_sub_button {
@@ -514,6 +523,7 @@ h3 {
 
 .footer_sub_button:is(:hover, :focus) {
   background-color: var(--pressed-state);
+  cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition-duration: 250ms, 0s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

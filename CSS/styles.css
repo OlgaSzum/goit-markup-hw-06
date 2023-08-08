@@ -470,9 +470,13 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-items: center;
+  align-items: baseline;
+}
 
-  width: 453px;
-  height: 80px;
+.user-email {
+  display: flex;
+  align-items: baseline;
+  justify-items: flex-end;
   gap: 24px;
 }
 
@@ -592,7 +596,7 @@ footer::placeholder {
   align-items: center;
 }
 
-.filters button:d:is(:hover, :focus) {
+.filters button:is(:hover, :focus) {
   background-color: var(--pressed-state);
   cursor: pointer;
   border: none;
@@ -682,7 +686,7 @@ footer::placeholder {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* MODAL  CLOSE BUTTON ---------------------------------------------- */
+/* MODAL CLOSE BUTTON ---------------------------------------------- */
 
 .closing-button {
   position: absolute;
@@ -810,7 +814,7 @@ form {
   justify-content: center;
 }
 
-/*-- ICONS MODAL INPUTS ------------------------------------> relative to label? */
+/* ICONS MODAL INPUTS ------------------------------------> relative to the label */
 
 .inputs {
   display: flex;
@@ -880,9 +884,10 @@ form {
 
 /* CHECKBOX -------------------------------------------------------*/
 
-.consent {
+.terms_input {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+justify-content: space-between;
   gap: 8px;
   width: 360px;
   height: 16px;
@@ -898,6 +903,7 @@ form {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.04em;
+  
   }
 
 .check_div a {

@@ -204,6 +204,7 @@ h3 {
     ),
     url(../images/people-office.jpg);
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero .container {
@@ -378,6 +379,7 @@ h3 {
   display: flex;
   align-items: center;
   background-color: var(--dark);
+  margin: 0 auto;
 }
 
 .footer .container {
